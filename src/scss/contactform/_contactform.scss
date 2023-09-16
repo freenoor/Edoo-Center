@@ -1,0 +1,316 @@
+/* CF 1 START*/
+.contact-form-1{
+    background: $white;
+    border-radius: 8px;
+    margin: 12px 0;
+    position: relative;
+    @media(max-width: 991.98px) {
+        margin: 24px 0;
+    }
+    .widgettitle{
+        padding: 32px 32px 0px 32px;
+        @media(max-width: 991.98px) {
+            padding: 24px 24px 0px 24px;
+        }
+    }
+    form{
+        padding: 32px;
+        box-shadow: 0 8px 30px rgb(0 0 0 / 18%);
+        border-radius: 8px;
+        @media(max-width: 991.98px) {
+            padding: 24px;
+        }
+        .wpcf7-response-output{
+            display: none;
+        }
+        p{
+            margin-bottom: 8px;
+            &:nth-last-child(-n+3){
+                margin-bottom: 0;
+            }
+            &:last-of-type{
+                position: relative;
+                overflow: hidden;
+                z-index: 1;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+                    left: -100%;
+                    transition: all 0.5s ease-in-out;
+                    z-index: 2;
+                  }     
+                  &:hover {        
+                      &::before {
+                        left: 100%;
+                      }
+                    }
+            }
+        }
+        label{
+            width: 100%;
+            font-size: 16px;
+            font-family: 'Roboto';
+            font-weight: 500;
+            input, textarea, select{
+                width: 100%;
+                border-radius: 0;
+                border: 0; 
+                border-bottom: 1px solid $black;
+                font-size: 16px;
+                font-family: 'Roboto';
+                font-weight: 300;
+            }
+            textarea{
+                max-height: 120px;
+            }
+            .wpcf7-not-valid-tip, .wpcf7-response-output{
+                display: none;
+            }
+            .wpcf7-not-valid{
+                border-bottom: 1px solid $red;
+            }
+        }
+        .wpcf7-submit{
+            border: unset!important;
+           @include button;
+            margin-top: 20px;
+            @media(max-width: 575.98px) {
+                width: 100%;
+            }
+        }
+        .wpcf7-spinner{
+            display: none;
+        }
+    }
+}
+
+.contact__section{
+    padding: 80px 0;
+    background: $body-color;
+    @media(max-width: 991.98px) {
+        padding: 40px 0 60px 0;
+    }
+    position: relative;
+    overflow: hidden;
+    &::before{
+        position: absolute;
+        content: "";
+        right: 170px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        bottom: 50px;
+         width: 100px;
+          height: 100px;
+        background-image: url(../../src/img/shape-04-2.png);
+        @media(max-width: 991.98px) {
+            position: absolute;
+            content: "";
+            right: 80px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            bottom: 0px;
+        }
+        @media(max-width: 575.98px) {
+            right: 0px;
+            width: 80px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            bottom: 20px;
+        }
+      }
+    &:after{
+        position: absolute;
+        content: "";
+        left: 50px;
+        top: 54px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        bottom: 20px;
+        width: 140px;
+        height: 140px;
+        z-index: -1;
+        background-image: url(../../src/img/shape-03-01-2.png);
+      }
+    .title{
+        text-align: center;
+        margin-bottom: 60px;
+        @media(max-width: 575.98px) {
+        margin-bottom: 40px;
+        }
+        h1{
+            font-family: 'Roboto';
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 26px;
+            color: $white;
+            display: inline-block;
+            margin-bottom: 0;
+            letter-spacing: .1em;
+            color: $primary;
+        }
+        h2{
+            font-family: 'Roboto';
+            font-weight: 400;
+            font-size: 55px;
+            margin-top: 5px;
+            margin-bottom: 40px;
+            color: $black;
+            strong{
+                font-weight: 900;
+            }
+            @media(max-width: 575.98px) {
+                font-size: 32px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .centerise{
+        align-self: center;
+        @media(max-width: 991.98px) {
+        padding: 0;
+        }
+        .contact-form-1{
+            max-width: 700px;
+            margin: auto;
+        }
+    }
+    .leftside{
+        align-self: center;
+    }
+}
+.social-media{
+    position: relative;
+    .shape{
+    background-image: linear-gradient(43deg, #00BFB5 0%, rgba(0, 191, 181, 0.5411764706) 46%, rgba(224, 224, 224, 0.2) 100%);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 150px;
+    @media(max-width: 575.98px) {
+        display: none;
+    }
+    }
+    display: flex;
+    align-items: center;
+    background: $body-color;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 700;
+    @media(max-width: 575.98px) {
+    background-image: linear-gradient(43deg, #00BFB5 0%, rgba(0, 191, 181, 0.5411764706) 46%, rgba(224, 224, 224, 0.2) 100%);
+    margin-top: 0;
+    height: unset;
+    padding: 40px 0 40px 0;
+    }
+    .socials{
+        li{
+            h2{
+                display: none;
+            }
+            ul{
+                display: flex;
+                @media(max-width: 575.98px) {
+                  flex-direction: column;
+                }
+                li{
+                background: #FFF;
+                box-shadow: 0 8px 30px rgb(0 0 0 / 18%);
+                border-radius: 5px;
+                width: 33.3%;
+                text-align: center;
+                transition: 0.4s;
+                 margin-bottom: 0px;
+                 position: relative;
+                 padding: 45px 0;
+                z-index: 1;
+                margin-right: 20px;
+                @media(max-width: 575.98px) {
+                   width: 100%;
+                   margin-bottom: 30px;
+                }
+                a{
+                    span{
+                        display: none;
+                    }
+                    &:before{
+                        position: relative;
+                        display: flex;
+                        content: "";
+                          width: 50px;
+                           height: 50px;
+                          margin: auto;
+                          background-repeat: no-repeat;
+                          background-size: contain;
+                           margin-bottom: 15px;
+                    }
+                }
+                &:nth-child(2){
+                    a{
+                        position: relative;
+                        &:before{
+                            background-image: url(../../src/img/socials22.png);
+                            
+                        }
+                    }
+                }
+                &:first-child{
+                    a{
+                        position: relative;
+                        &:before{
+                            background-image: url(../../src/img/socials1.png);
+                        }
+                    }
+                }
+                &:last-child{
+                    margin-right: 0;
+                    a{
+                        position: relative;
+                        &:before{
+                            background-image: url(../../src/img/socials3.png);
+                        }
+                    }
+                }
+                }
+            }
+        }
+        .title{
+            text-align: center;
+        margin-bottom: 60px;
+        @media(max-width: 575.98px) {
+margin-bottom: 50px;
+        }
+        h1{
+            font-family: 'Roboto';
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 26px;
+            color: $white;
+            display: inline-block;
+            margin-bottom: 0;
+            letter-spacing: .1em;
+            color: $primary;
+        }
+        h2{
+            font-family: 'Roboto';
+            font-weight: 400;
+            font-size: 55px;
+            margin-top: 5px;
+            margin-bottom: 40px;
+            color: $black;
+            strong{
+                font-weight: 700;
+            }
+            @media(max-width: 575.98px) {
+                font-size: 32px;
+                margin-bottom: 30px;
+            }
+        }
+        }
+    }
+}
+/* CF 1 END*/

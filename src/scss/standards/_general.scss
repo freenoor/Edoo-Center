@@ -1,0 +1,60 @@
+/* General style START*/
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+a,
+a:hover {
+    text-decoration: none;
+    color: $black;
+}
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+ul,
+li {
+    list-style-type: none;
+}
+button {
+    cursor: pointer;
+}
+button,
+input {
+    outline: none;
+    border: none;
+}
+body {
+    overflow-x: hidden;
+    &.overflow-hidden {
+        overflow: hidden;
+    }
+    font-family: $Roboto;
+    h2{
+        font-family: $Roboto;
+    }
+}
+.d-none{
+    display: none!important;
+}
+.d-none-desktop{
+    @media (min-width: 991.98px) {
+        display: none;
+    }
+}
+.d-none-mobile{
+    @media (max-width: 991.98px) {
+        display: none;
+    }
+}
+/* General style END*/
